@@ -177,15 +177,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.6
     - name: Checks
       run: |
         ruby .github/osia_convert.rb
